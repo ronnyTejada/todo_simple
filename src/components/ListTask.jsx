@@ -24,7 +24,7 @@ const ListTask = () => {
   };
 
   const handleChange = (e) => {
-    setParticipants(e.target.value)
+    setParticipants(e.target.value);
   };
 
   return (
@@ -33,7 +33,6 @@ const ListTask = () => {
         type="text"
         className="list_input"
         placeholder="Participantes"
-       
         onKeyPress={(event) => {
           if (!/[0-9]/.test(event.key)) {
             event.preventDefault();
@@ -41,7 +40,7 @@ const ListTask = () => {
         }}
         onChange={(e) => handleChange(e)}
       />
-      <button className="list_button" onClick={() => fetchData(participants)} >
+      <button className="list_button" onClick={() => fetchData(participants)}>
         Añadir
       </button>
       {data.map((item) => {
